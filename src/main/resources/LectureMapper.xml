@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="LectureMapper">
+
+	<select id="getAllLectures" resultType="com.han.model.Lecture">
+		SELECT * FROM lectures
+	</select>
+	
+	<select id="getLectureByID" parameterType="Integer" resultType="com.han.model.Lecture">
+		SELECT * FROM lectures WHERE lecture_id = #{lecture_id}
+	</select>
+	
+	<select id="getPersonalLectures" parameterType="Integer" resultType="com.han.model.Lecture">
+		SELECT * FROM lectures
+		WHERE lecture_id = ANY(SELECT lecture_id FROM user_lecture WHERE user_id = #{user_id})
+	</select>
+	
+	<insert id="addMyLecture" parameterType="Integer">
+		INSERT INTO `user_lecture` (`user_id`, `lecture_id`) VALUES (#{user_id}, #{lecture_id})
+	</insert>
+	
+		<insert id="addLecture" parameterType="com.han.model.Lecture">
+		INSERT INTO `lectures` (`title`, `language`, `price`, `image_url`, `description`) VALUES (#{title}, #{language}, #{price}, #{image_url}, #{description})
+	</insert>
+	
+	<delete id="deleteLecture" parameterType="Integer">
+	DELETE FROM lectures WHERE (`lecture_id` = #{lecture_id});
+	
+	</delete>
+
+</mapper>

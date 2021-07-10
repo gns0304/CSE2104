@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ArticleMapper">
+
+		<insert id="addArticle" parameterType="com.han.model.Article">
+		INSERT INTO `articles` (`user_id`, `title`, `body`) VALUES (#{user_id}, #{title}, #{body});
+	</insert>
+		
+		<select id="getArticle" parameterType="Integer" resultType="com.han.model.Article">
+		SELECT * FROM articles WHERE article_id = #{article_id}
+	</select>
+	
+	<select id="getWriter" parameterType="Integer" resultType="Integer">
+		SELECT user_id FROM articles WHERE article_id = #{article_id}
+	</select>
+	
+		
+	<update id="updateArticle" parameterType="com.han.model.Article" >
+		UPDATE articles SET `title` = #{title}, `body` = #{body} WHERE (`article_id` = #{article_id})
+
+	</update>
+	
+	<delete id="deleteArticle" parameterType="Integer">
+	DELETE FROM articles WHERE (`article_id` = #{article_id});
+	
+	</delete>
+	
+		<select id="getAllArticles" resultType="com.han.model.Article">
+		SELECT * FROM articles
+	</select>
+	
+	
+</mapper>

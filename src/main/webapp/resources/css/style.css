@@ -1,0 +1,60 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+body {
+	margin : 0;
+	padding : 0;
+	font-family: 'Noto Sans KR', sans-serif;
+	}
+	
+nav .container {background-color : #005799; height:60px;}
+nav a {color : white;}
+nav a.title {font-size:16pt; font-weight:bold; margin-top:10px;}
+nav a:visited{color : white; text-decoration:none;}
+nav a:link{color : white; text-decoration:none;}
+li a:hover{text-decoration:underline;}
+nav ul.navbar-nav {list-style:none; float:right; margin:0; right:50px; top:18px; position:absolute;}
+nav li {font-weight:bold; display:inline-block; color : white; margin-right:5px;}
+nav .navbar-header{display:inline-block; margin: 12px 0 0 50px}
+
+/* 로그인 */
+#alert{color:#A94442; background-color:#F2DEDE; text-align:center; height:40px; padding-top:15px; text-decoration:underline;}
+.title{text-align:center; font-size: 28pt; font-weight:bold; margin:30px 0}
+
+.textbox{font-family: 'Noto Sans KR', sans-serif;font-size:12pt;height:45px; width:300px; margin:10px 0 0 0; border:1px solid #dadada;}
+.login-form{margin:0 auto; text-align:center;}
+.login-container{text-align:center;}
+.login-submit{font-family: 'Noto Sans KR', sans-serif; font-weight:bold; font-size:12pt; margin-top: 10px; height:45px; width:300px; background-color:#005799; color: white; border:0;}
+.textarea{font-family: 'Noto Sans KR', sans-serif;font-size:12pt;height:180px; width:300px; margin:10px 0 0 0; border:1px solid #dadada;}
+
+/* 메인 화면 */
+
+.my-lecture-list{margin: 0 auto; font-size:12pt;border:1px solid #dadada; border-collapse: collapse;}
+
+#info{color:#005799; background-color:#E9F8FF; text-align:center; height:40px; padding-top:15px; text-decoration:underline;}
+a:link.info-link {color:#005799; background-color:#E9F8FF; text-align:center; height:40px; padding-top:15px; text-decoration:underline;}
+a:visited.info-link {color:#005799; background-color:#E9F8FF; text-align:center; height:40px; padding-top:15px; text-decoration:underline;}
+
+
+
+
+tr{height:90px;}
+td.list-item{border:1px solid #dadada; }
+td.list-pic img{height:100px; border-radius:100%;}
+td.list-language{width:120px;text-align:center;}
+td.list-title{width:500px;padding-left:50px;font-weight:bold; }
+.list-title a:visited {text-decoration:none; color:black;}
+.list-title a:link {text-decoration:none; color:black;}
+.list-button{font-family: 'Noto Sans KR', sans-serif; font-weight:bold; font-size:14pt; margin: 50px auto 0 auto; height:50px; display:block; width:760px; background-color:#005799; color: white; border:0;}
+
+/* 강좌 구매 */
+#container{width:100%; display:inline-block}
+.item{text-align:center; margin: 0 auto;}
+.lecture-image img{height:150px; text-align: center; border-radius:100%;}
+
+
+.article-item{text-align:center; border-bottom:2px solid #dadada; width:40%; display:block; margin: 10px auto;}
+a.list-title {color:black;}
+a:link.list-title {text-decoration:none; color:black;}
+a:visited.list-title {text-decoration:none; color:black;}
+
